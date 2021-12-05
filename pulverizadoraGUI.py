@@ -1,4 +1,5 @@
 from pulverizadora_ui import *
+import formulasPulverizadora
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -16,7 +17,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
      # cambia el valor de cosito por ojete de mono y lo imprime en la consola
     def prueba(self):
         caudal_campo = int(self.caja_caudal_campo.text())
-        mis_variables["caudal_campo"] = "ojete de mono"        
+        variables["caudal_campo"] = "ojete de mono"        
 
 
 
@@ -32,20 +33,29 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
     def calcular(self):
-        #self.obtener_valores()
         self.prueba()
         
-        print(mis_variables["caudal_campo"])
+        print(variables["caudal_campo"])
+
+        formulasPulverizadora.saludo(variables["Q"]) #otra prueba: usé una función del módulo con un valor del objeto de acá !!
+
+        
+
 
         
         # Etiqueta que muestra el resultado final: exito! imprime lo del diccionario: "ojete de mono" en la etiqueta y en la consola.
-        self.resultados.setText(mis_variables["caudal_campo"]) #recordar pasarlo int a string, porque el método setText() solo trabaja con strings.
-        
-        
-mis_variables = {
-    "caudal_campo": "cosito"
+        self.resultados.setText(variables["caudal_campo"]) #recordar pasarlo int a string, porque el método setText() solo trabaja con strings.
+    
 
 
+
+
+# Objeto con las variables:        
+variables = {
+    "Q": "esto vino del objeto en el archivo principal",
+    "q": 0,
+    "v": 0,
+    "a": 0 
 }
 
 
