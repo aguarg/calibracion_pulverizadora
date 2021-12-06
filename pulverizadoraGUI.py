@@ -30,12 +30,44 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # esto usa map() para iterar por la lista valores y aplica la función convertir() a cada valor. Devuelve una nueva lista mapeados:
         mapeados = list(map(convertir, valores))
 
-        # Imprime lo que sea en la etiqueta "resultados". Le metí la lista para ver si funcionaba nomás.
-        #self.resultados.setText(str(mapeados))
 
 
+        # CÁLCULOS:
+        # Cálculo del caudal de campo (Q), el primer elemento de la lista "mapeados":
+        if mapeados[0] == "x":
+            caudalCampo = formulasPulverizadora.Q(mapeados[1], mapeados[2], mapeados[3])
+            
+            self.resultados.setText("El caudal de campo es: " + str(caudalCampo))
+        
+        
+        # Cálculo del caudal de boquilla (q), el segundo elemento de la lista "mapeados":    
+        elif mapeados[1] == "x":
+            caudalBoquilla = formulasPulverizadora.q(mapeados[0], mapeados[2], mapeados[3])
+
+            self.resultados.setText("El caudal de boquilla es: " + str(caudalBoquilla))
+
+
+        # Cálculo de la velocidad de avance (v), el tercer elemento de la lista "mapeados":    
+        elif mapeados[2] == "x":
+            velocidadAvance = formulasPulverizadora.v(mapeados[0], mapeados[1], mapeados[3])
+
+            self.resultados.setText("La velocidad de avance es de: " + str(velocidadAvance) + " kilómetros por hora") 
+
+
+
+        # Cálculo del ancho de boquilla (a), el cuarto elemento de la lista "mapeados":    
+        elif mapeados[3] == "x":
+            anchoBoquilla = formulasPulverizadora.a(mapeados[0], mapeados[1], mapeados[2])
+
+            self.resultados.setText("El ancho de labor de cada boquilla es de: " + str(anchoBoquilla) + " metros")           
+
+            
+
+
+        # para probar si todo va en orden:
         print(mapeados)
 
+        
 
 
 # Función usada por el map(): si hay un "" mete una x, y si hay un número como string, lo pasa a integer:
@@ -43,12 +75,14 @@ def convertir(elemento):
     if elemento == "":
         return "x"
     else:
-        return int(elemento)    
+        return int(elemento) 
+
 
 
 
 # Lista que recibe los valores de las cajas al apretar el botón calcular:       
 valores = []
+# (recordar que los valores mapeados están en la lista mapeados. Usar esa para los cálculos)    <-----------------
         
 
      

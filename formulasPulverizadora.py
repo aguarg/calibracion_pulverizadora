@@ -38,26 +38,8 @@ def a(Q, q, v):
 
 
 
-
-#valores = ["67", " ", "5", "2"]
-
-
-# Función del map(): si hay un espacio, lo reemplaza por una "x", si no, cambia el string por un integer:
-"""
-def convertir(elemento):
-	if elemento == " ":
-		return "x"
-	else:
-		return int(elemento)	
-
-
-# esto usa map() para iterar por la lista y aplica la función convertir() a cada valor. Devuelve una nueva lista mapeados:
-mapeados = list(map(convertir, valores))
-
-print(mapeados)
-
-"""
-
+def prueba(argumento):
+	return argumento
 
 
 
