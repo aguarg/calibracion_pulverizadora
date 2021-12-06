@@ -30,7 +30,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # esto usa map() para iterar por la lista valores y aplica la función convertir() a cada valor. Devuelve una nueva lista mapeados:
         mapeados = list(map(convertir, valores))
 
+        # Imprime lo que sea en la etiqueta "resultados". Le metí la lista para ver si funcionaba nomás.
+        #self.resultados.setText(str(mapeados))
+
+
         print(mapeados)
+
 
 
 # Función usada por el map(): si hay un "" mete una x, y si hay un número como string, lo pasa a integer:
@@ -42,21 +47,11 @@ def convertir(elemento):
 
 
 
-
-
-
-
-# Lista con los valores de las cajas        
+# Lista que recibe los valores de las cajas al apretar el botón calcular:       
 valores = []
         
 
-    # ERROR: ValueError: invalid literal for int() with base 10: ''
-    # Esto pasa porque se quiere convertir a integer una cadena vacía. solo sucede si la caja está vacía.    
-
-        
-       #Imprime en la etiqueta:
-        #self.resultados.setText() #recordar pasarlo int a string, porque el método setText() solo trabaja con strings.
-    
+     
 
 
 

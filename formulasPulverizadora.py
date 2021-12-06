@@ -39,10 +39,11 @@ def a(Q, q, v):
 
 
 
-valores = ["67", " ", "5", "2"]
+#valores = ["67", " ", "5", "2"]
 
 
 # Función del map(): si hay un espacio, lo reemplaza por una "x", si no, cambia el string por un integer:
+"""
 def convertir(elemento):
 	if elemento == " ":
 		return "x"
@@ -54,6 +55,10 @@ def convertir(elemento):
 mapeados = list(map(convertir, valores))
 
 print(mapeados)
+
+"""
+
+
 
 
 
