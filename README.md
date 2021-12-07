@@ -1,6 +1,11 @@
 # calibracion_pulverizadora
 Programa para la calibración de equipos pulverizadores.
 
---en proceso--
+Resuelve cálculos para cuatro variables distintas: 
 
-Se siguen agregando funciones.
+* caudal de campo
+* caudal de boquilla
+* ancho de labor de cada pico
+* velocidad de avance del equipo pulverizador.
+
+Se le suministran 3 valores en las cajas y se deja la caja vacía para la variable que se quiera calcular.
