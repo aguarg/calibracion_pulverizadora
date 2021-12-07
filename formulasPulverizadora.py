@@ -12,7 +12,7 @@
 
 # ====================== Ecuaciones ==========================
 
-# 1- Ecuación Q = (q*600) / (*a):
+
 # Q, el caudal de campo:
 def Q(q, v, a):
 	return (q * 600) / (v * a)
@@ -37,9 +37,6 @@ def a(Q, q, v):
 
 
 
-
-def prueba(argumento):
-	return argumento
 
 
 
