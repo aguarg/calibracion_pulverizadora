@@ -1,5 +1,5 @@
-# calibracion_pulverizadora
-Programa para la calibración de equipos pulverizadores.
+# Calibracion de equipos pulverizadores
+Programa con interfaz gráfica para la calibración de equipos pulverizadores.
 
 Resuelve cálculos para cuatro variables distintas: 
 
